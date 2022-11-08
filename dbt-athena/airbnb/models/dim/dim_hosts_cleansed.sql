@@ -11,7 +11,7 @@ WITH src_hosts AS (
 )
 SELECT
     host_id,
-    NVL(
+    COALESCE(
         host_name,
         'Anonymous'
     ) AS host_name,
