@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: public
+    schema: public
+    tables:
+      - name: listings
+        identifier: raw_listings 
+  - name: spectrum
+    schema: spectrum
+    tables:
+      - name: hosts
+        identifier: raw_hosts
