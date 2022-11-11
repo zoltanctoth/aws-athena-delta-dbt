@@ -6,6 +6,6 @@ CREATE EXTERNAL TABLE IF NOT EXISTS raw_hosts
                      created_at VARCHAR(512),
                      updated_at VARCHAR(512))
 ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde' 
-WITH SERDEPROPERTIES ('separatorChar' = ',', 'quoteChar' = '"')
+WITH SERDEAPROPERTIES ('separatorChar' = ',', 'quoteChar' = '"')
 LOCATION 's3://nordquant/athena/airbnb/hosts/'
 TBLPROPERTIES ("skip.header.line.count"="1")

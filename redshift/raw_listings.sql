@@ -9,13 +9,13 @@ CREATE TABLE IF NOT EXISTS raw_listings
                      created_at TIMESTAMP,
                      updated_at TIMESTAMP);
 
-COPY raw_listings
-FROM 's3://nordquant-ie/athena/airbnb/listings/listings.csv'
+COPY raw_hosts
+FROM 's3://nordquant-ie/athena/airbnb/hosts/hosts.csv'
 IAM_ROLE 'arn:aws:iam::203090161628:role/RedshiftS3ReadOnlyAccess'
 CSV
 IGNOREHEADER 1
 QUOTE '"'
 DELIMITER ','
-TIMEFORMAT AS 'YYYY-MM-DDTHH24:MI:SSZ';
+TIMEFORMAT AS 'YYYY-MM-DD HH24:MI:SS';
 
 SELECT * FROM stl_load_errors;

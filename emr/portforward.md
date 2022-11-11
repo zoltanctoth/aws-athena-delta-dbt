@@ -1,0 +1,1 @@
+ssh -i ~/... -ND 9443 hadoop@hadoop@ec2-34-255-178-42.eu-west-1.compute.amazonaws.com
